@@ -17,7 +17,12 @@ function Contact() {
         </p>
         <p>
           <strong>Phone:</strong> <br />
-          <a href="tel:+254707919856" className="contact-link">
+          <a
+            href="https://wa.me/254707919856?text=Hi,%20I%20need%20help%20with%20my%20assignment!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link whatsapp-link"
+          >
             +254 707 919 856
           </a>
         </p>
