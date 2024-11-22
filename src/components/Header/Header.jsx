@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import siteLogo from '../../assets/toptutors.png'
+import siteLogo from '../../assets/topTutors.png'
 
 function Header() {
   return (
