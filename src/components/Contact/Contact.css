@@ -1,0 +1,57 @@
+.contact {
+  padding: 50px 40px;
+  background-color: #041333;
+  color: white;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  color: orange;
+  margin-bottom: 20px;
+  animation: zoomIn 1s ease;
+}
+
+.contact p {
+  font-size: 1rem;
+  margin: 5px 0;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.contact p:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.contact p:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.contact p:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.contact p:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+/* Animations */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
