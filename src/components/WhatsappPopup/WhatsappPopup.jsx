@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './WhatsAppPopup.css';
+import './WhatsappPopup.css';
 import { FaWhatsapp } from 'react-icons/fa'; // React Icons for WhatsApp logo
 
 function WhatsAppPopup() {
