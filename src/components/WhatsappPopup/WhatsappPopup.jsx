@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './WhatsappPopup.css';
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaUndo, FaWhatsapp } from 'react-icons/fa';
 
 function WhatsAppPopup() {
   const [showPopup, setShowPopup] = useState(false);
@@ -47,7 +47,8 @@ function WhatsAppPopup() {
             <p>Do you want to start a chat with us on WhatsApp?</p>
             <div className="modal-actions">
               <button onClick={handleConfirmRedirect} className="modal-button confirm">
-                Yes, Open
+                <FaWhatsapp />
+                Redirect To WhatsApp
               </button>
               <button onClick={handleCloseModal} className="modal-button cancel">
                 Cancel
