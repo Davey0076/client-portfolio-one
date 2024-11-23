@@ -1,6 +1,6 @@
 .whatsapp-popup {
     position: fixed;
-    top: 200px; /* Position near the top */
+    bottom: 20px; /* Position near the top */
     right: 20px; /* Slightly away from the edge */
     background-color: white;
     border: 2px solid green;
