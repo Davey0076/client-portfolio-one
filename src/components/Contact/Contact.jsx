@@ -1,39 +1,54 @@
 import React from 'react';
 import './Contact.css';
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
 
 function Contact() {
   return (
-    <section id="contact" className="contact">
+    <section id="contact" className="contact-section">
       <h2>Contact Us</h2>
+      <p className="contact-intro">
+        We're here to assist you! Feel free to reach out through any of the options below.
+      </p>
       <div className="contact-details">
-        <p>
-          <strong>Name:</strong> James Njue
-        </p>
-        <p>
-          <strong>Email:</strong> <br />
+        {/* Email */}
+        <div className="contact-item">
+          <FaEnvelope className="contact-icon" />
           <a href="mailto:lordjimlee@gmail.com" className="contact-link">
             lordjimlee@gmail.com
           </a>
-        </p>
-        <p>
-          <strong>Phone:</strong> <br />
+        </div>
+
+        {/* Phone */}
+        <div className="contact-item">
+          <FaPhoneAlt className="contact-icon" />
+          <a href="tel:+254707919856" className="contact-link">
+            +254 707 919 856
+          </a>
+        </div>
+
+        {/* WhatsApp */}
+        <div className="contact-item">
+          <FaWhatsapp className="contact-icon whatsapp-icon" />
           <a
             href="https://wa.me/254707919856?text=Hi,%20I%20need%20help%20with%20my%20assignment!"
             target="_blank"
             rel="noopener noreferrer"
-            className="contact-link whatsapp-link"
+            className="contact-link"
           >
-            +254 707 919 856
+            Chat on WhatsApp
           </a>
-        </p>
-        <p>
-          <strong>Address:</strong> 
-          <p>
+        </div>
+
+        {/* Address */}
+        <div className="contact-item">
+          <FaMapMarkerAlt className="contact-icon" />
+          <p className="contact-text">
             1083, Embu, Nairobi, 60100, Kenya
           </p>
-        </p>
+        </div>
       </div>
-      <p style={{ marginTop: '1rem' }}>Reach out today, and let’s get started on your success journey!</p>
+
+     
     </section>
   );
 }
