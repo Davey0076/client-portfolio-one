@@ -1,4 +1,3 @@
-
 .hero {
   background-color: orange;
   color: black;
@@ -6,20 +5,26 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Ensure content is vertically centered */
   overflow: hidden;
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1; /* Text takes equal space */
+  padding: 20px; /* Padding for better spacing */
 }
 
 .hero-text h1 {
   font-size: 3rem;
+  font-weight: bold;
   margin-bottom: 20px;
   animation: textSlideIn 1.5s ease-in-out forwards;
-}
-
-.hero-text{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  color: black; /* Ensure contrast against orange */
 }
 
 .hero-text p {
@@ -34,10 +39,25 @@
   font-weight: bold;
   color: black;
   text-shadow: 1px 1px white;
+  margin-top: 20px; /* Space below the paragraph */
   animation: pulse 2s infinite;
 }
 
+.hero-image {
+  flex: 1;
+  position: absolute; /* Ensure the image spans edges */
+  bottom: 0;
+  right: 0;
+  width: 50%; /* Set width for large screens */
+  height: 100%; /* Stretch to cover the hero's height */
+  overflow: hidden; /* Crop overflowing image parts */
+}
 
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Preserve aspect ratio while filling the container */
+}
 
 /* Animations */
 @keyframes textSlideIn {
@@ -74,26 +94,38 @@
 /* Responsive Styles for Small Screens */
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column;
+    flex-direction: column; /* Stack text and image */
     text-align: center;
+    padding: 20px; /* Maintain padding */
   }
 
-  .hero-content {
-    margin-right: 0;
+  .hero-text {
+    align-items: center; /* Center text content */
     margin-bottom: 20px;
+    padding: 0; /* Remove extra padding on smaller screens */
   }
 
-  .hero-title {
-    font-size: 2rem;
+  .hero-text h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .hero-text p {
+    font-size: 1rem; /* Adjust text size for readability */
   }
 
   .cta {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Slightly smaller CTA */
+  }
+
+  .hero-image {
+    position: relative; /* Allow it to flow naturally */
+    width: 100%; /* Full width for small screens */
+    height: auto; /* Adjust height automatically */
+    margin-top: 10px; /* Space between text and image */
   }
 
   .hero-image img {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    height: auto; /* Maintain image ratio */
   }
 }
-

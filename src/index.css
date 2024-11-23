@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
+
+
 /* Reset */
 * {
     margin: 0;
@@ -51,4 +54,17 @@
   .mb-20 {
     margin-bottom: 20px;
   }
+
+  /* Heading Font */
+h1, h2, h3, .hero-title, .cta {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+/* Body Font */
+body, p, a, .hero-subtext, .contact-details {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
   
