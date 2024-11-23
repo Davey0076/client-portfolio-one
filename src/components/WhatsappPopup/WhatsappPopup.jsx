@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './WhatsappPopup.css';
-import { FaWhatsapp } from 'react-icons/fa'; // React Icons for WhatsApp logo
+import { FaWhatsapp } from 'react-icons/fa';
 
 function WhatsAppPopup() {
   const [showPopup, setShowPopup] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     // Show the popup after 5 seconds
@@ -14,25 +15,48 @@ function WhatsAppPopup() {
     return () => clearTimeout(timer); // Cleanup timer on component unmount
   }, []);
 
-  const handleWhatsAppClick = () => {
-    const userConfirmed = window.confirm(
-      'Do you want to open WhatsApp to start a chat with us?'
+  const handleOpenModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const handleConfirmRedirect = () => {
+    window.open(
+      'https://wa.me/254707919856?text=Hi,%20I%20need%20help%20with%20my%20assignment!',
+      '_blank'
     );
-    if (userConfirmed) {
-      window.open(
-        'https://wa.me/254707919856?text=Hi,%20I%20need%20help%20with%20my%20assignment!',
-        '_blank'
-      );
-    }
+    setShowModal(false);
   };
 
   return (
-    showPopup && (
-      <div className="whatsapp-popup" onClick={handleWhatsAppClick}>
-        <FaWhatsapp className="whatsapp-icon" />
-        <p className="whatsapp-text">WhatsApp</p>
-      </div>
-    )
+    <>
+      {showPopup && (
+        <div className="whatsapp-popup" onClick={handleOpenModal}>
+          <FaWhatsapp className="whatsapp-icon" />
+          <p className="whatsapp-text">WhatsApp</p>
+        </div>
+      )}
+
+      {showModal && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <h3>Open WhatsApp</h3>
+            <p>Do you want to start a chat with us on WhatsApp?</p>
+            <div className="modal-actions">
+              <button onClick={handleConfirmRedirect} className="modal-button confirm">
+                Yes, Open
+              </button>
+              <button onClick={handleCloseModal} className="modal-button cancel">
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
