@@ -7,7 +7,7 @@ function Hero() {
     <section className="hero">
       <div className="hero-text">
         <h1>Welcome to Toptutors</h1>
-        <p>
+        <p style={{ fontWeight: '600' }}>
         Struggling with Assignments? We've Got You Covered!
         </p>
         <p>
