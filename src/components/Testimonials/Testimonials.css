@@ -1,0 +1,26 @@
+.testimonials-wrapper{
+    background-color: #c4c1c1;
+}
+
+.testimonials{
+    display: flex;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.testimonials-header{
+    align-self: center;
+    justify-self: center;
+}
+
+.testimonials-container{
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 0 0 1px rgb(44, 44, 44);
+}
+
+.testimonials-container:hover{
+    background-color: azure;
+    transform: scale(1.03);
+}

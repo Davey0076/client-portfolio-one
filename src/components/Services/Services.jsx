@@ -4,28 +4,40 @@ import './Services.css';
 function Services() {
   return (
     <section id="services" className="services">
-      <h2>How It Works <span style={{ fontWeight: '400', fontStyle: 'italic' }}> - Simple, Fast, Effective</span></h2>
+      <div className="how-it-works-wrapper">
+      <h2>How It Works </h2>
 
-      <ul>
-        <li>
-        <h3>Send Us Your Instructions</h3>
-        <p>Share the details of your assignment, quiz, or exam requirements with us from the contacts provided.</p>
+<ul>
+<li>
+  <h3>Submit Your Request</h3>
+  <p>Share your assignment, quiz, or exam details with us</p>
+  </li>
+  <li>
+  <h3>Get a Quote</h3>
+  <p>Receive transparent, affordable price for our services.</p>
+  </li>
+  <li>
+  <h3>Achieve Better Results</h3>
+  <p>Review your completed work and ace your studies!</p>
+  </li>
+</ul>
+      </div>
 
-        </li>
+      <div className="vertical-line">
+      </div>
 
-        <li>
-        <h3>We Get To Work</h3>
-        <p>Our expert team solves your task with precision and care.</p>
-
-        </li>
-
-        <li>
-        <h3>Receive Your Solution</h3>
-        <p>Sit back and relax while we deliver a high-quality, ready-to-submit solution.</p>
-
-        </li>
+      <div className="what-we-offer-wrapper">
+      <h2>What We Offer </h2>
+      <ul className='what-we-offer-ul'>
+        <li>Assignment Assistance in All Subjects</li>
+      <li>Quiz And Test Solutions</li>
+      <li>Exam preparation help</li>
+      <li>Plagiarism-free work</li>
+      <li>Detailed Explanations For Better Understanding</li>
+   
       </ul>
-    </section>
+      </div>
+      </section>
   );
 }
 

@@ -1,19 +1,21 @@
 import React from 'react';
 import './Contact.css';
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
 
 function Contact() {
   return (
     <section id="contact" className="contact-section">
       <h2>Contact Us</h2>
       <p className="contact-intro">
-        We're here to assist you! Feel free to reach out through any of the options below.
+        Take the stress out of your studies. Contact TopTutors now and let us help you achieve the grades you deserve.
+        <br />
+        Don't wait- your academic success is just a click away!
       </p>
       <div className="contact-details">
         {/* Email */}
         <div className="contact-item">
           <FaEnvelope className="contact-icon" />
-          <a href="mailto:lordjimlee@gmail.com" className="contact-link">
+          <a href="mailto:lordjimlee@gmail.com" target='_blank' className="contact-link">
             lordjimlee@gmail.com
           </a>
         </div>
@@ -21,7 +23,7 @@ function Contact() {
         {/* Phone */}
         <div className="contact-item">
           <FaPhoneAlt className="contact-icon" />
-          <a href="tel:+254707919856" className="contact-link">
+          <a href="tel:+254707919856" target='_blank' className="contact-link">
             +254 707 919 856
           </a>
         </div>
@@ -36,6 +38,15 @@ function Contact() {
             className="contact-link"
           >
             Chat on WhatsApp
+          </a>
+        </div>
+
+        {/* Linkedin */}
+        <div className="contact-item">
+          <FaLinkedin className="contact-icon" />
+
+          <a href="https://www.linkedin.com/in/james-njue-491a2818b/" target='_blank' className="contact-link">
+            James Njue
           </a>
         </div>
 

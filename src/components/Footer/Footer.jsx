@@ -6,7 +6,7 @@ function Footer() {
     <footer className="footer">
       <div className="line-break"></div>
       <p>© 2024 Toptutors. All Rights Reserved.</p>  
-      <p>Dedicated to helping students achieve academic excellence across all disciplines.</p>
+      <p>Fast, Reliable, and Stress-Free Every Time.</p>
 
     </footer>
   );
